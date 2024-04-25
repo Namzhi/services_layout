@@ -1,0 +1,32 @@
+.heading-block {
+  &__extend-container--hidden {
+    display: none;
+  }
+
+  @media (min-width: $screen-md) {
+  }
+  @media (min-width: $screen-lg) {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    max-width: 1440px;
+    justify-content: space-between;
+
+    &__menu {
+      display: flex;
+    }
+
+    &__menu:first-child {
+      margin-right: 20px;
+    }
+
+    &__action {
+      align-self: center;
+      margin-right: 8px;
+    }
+
+    &__extend-container--hidden {
+      display: flex;
+    }
+  }
+}

@@ -1,0 +1,9 @@
+import '../scss/mixins.scss';
+import './swiper-brands';
+import './swiper-kinds';
+import './swiper-prices';
+import './feedback';
+import './order-call';
+import './mobile-menu';
+import './languages__buttons';
+import './readmore__text';

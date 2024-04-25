@@ -1,0 +1,38 @@
+.readmore {
+  &__text {
+    margin-bottom: 16px;
+    height: 24px;
+    font-family: TTLakes-Regular;
+    font-weight: 600;
+    font-size: $font-size-readmore;
+    letter-spacing: -$letter-spacing;
+    display: flex;
+    align-items: center;
+  }
+
+  &__text::before {
+    content: '';
+    background-image: url('../img/services/expand.svg');
+    height: 24px;
+    width: 24px;
+    margin-right: 8px;
+  }
+
+  @media (min-width: $screen-md) {
+    &__text {
+      margin-bottom: 32px;
+      left: 16px;
+      top: 426px;
+    }
+    &__text--expand {
+      top: 500px;
+    }
+  }
+  @media (min-width: $screen-lg) {
+    margin: 0;
+
+    &__text {
+      margin: 0;
+    }
+  }
+}

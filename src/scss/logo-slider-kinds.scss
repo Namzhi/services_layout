@@ -1,0 +1,115 @@
+.logo-slider-kinds {
+  &__wrapper {
+    margin-left: 16px;
+  }
+
+  &__slide {
+    width: 240px;
+    height: 160px;
+
+    background-color: white;
+    border: 1px solid $color-divider;
+    border-radius: 6px;
+    margin-bottom: 16px;
+  }
+  &__text {
+    display: block;
+
+    transform: translate(16px, -26px);
+  }
+
+  &__button {
+    width: 40px;
+    height: 40px;
+    background: none;
+    border: none;
+    border-radius: 100%;
+    background: transparent url('../img/services/бренды.svg') no-repeat -216px -96px;
+
+    transform: translate(184px, 104px);
+    transition: all 0.2s ease-in-out;
+  }
+  &__button:hover {
+    opacity: 0.5;
+    cursor: pointer;
+  }
+
+  &__fade {
+    position: absolute;
+    transform: translate(1px, -178px);
+    right: 0;
+    z-index: 1;
+    width: 24px;
+    height: 160px;
+    background: linear-gradient(
+      270deg,
+      #f8f8f8 16.84%,
+      rgba(248, 248, 248, 0.0001) 100%
+    );
+  }
+
+  &__showmore {
+    &--hidden {
+      display: none;
+    }
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  @media (min-width: $screen-md) {
+    &__wrapper {
+      flex-wrap: wrap;
+      margin-left: 0;
+      margin-bottom: 24px;
+    }
+
+    &__wrapper--open-margin-bottom {
+      margin-bottom: 30px;
+    }
+
+    &__wrapper--hidden {
+      height: 163px;
+      overflow: hidden;
+    }
+
+    &__slide {
+      width: 224px;
+      height: 160px;
+    }
+
+    &__button {
+      transform: translate(168px, 104px);
+    }
+
+    &__fade--hidden {
+      display: none;
+    }
+
+    &__showmore {
+      width: 156px;
+
+      &--hidden {
+        display: block;
+      }
+    }
+
+    &__showmore-text {
+      height: 24px;
+      font-family: TTLakes-Regular;
+      font-weight: 600;
+      font-size: 16px;
+      letter-spacing: -0.2px;
+      display: flex;
+      align-items: center;
+
+      &::before {
+        content: '';
+        background-image: url('../img/services/expand.svg');
+        height: 24px;
+        width: 24px;
+        margin-right: 9px;
+      }
+    }
+  }
+}

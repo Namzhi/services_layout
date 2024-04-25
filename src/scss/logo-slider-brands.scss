@@ -1,0 +1,148 @@
+.logo-slider-brands {
+  &__wrapper {
+    margin-left: 16px;
+  }
+
+  &__slide {
+    width: 240px;
+    height: 72px;
+
+    background-color: white;
+    border: 1px solid $color-divider;
+    border-radius: 6px;
+    margin-bottom: 16px;
+  }
+
+  &__image {
+    width: 140px;
+    height: 70px;
+    background: url('../img/services/бренды.svg') no-repeat;
+    transform: translate(10px, 1px);
+
+    &--brand-lenovo {
+      background-position: -42px -81px;
+    }
+
+    &--brand-samsung {
+      background-position: -314px -81px;
+      border-top-left-radius: 88%;
+    }
+
+    &--brand-apple {
+      background-position: -586px -81px;
+    }
+
+    &--brand-viewSonic {
+      background-position: -858px -81px;
+    }
+
+    &--brand-bosch {
+      background-position: -42px -169px;
+    }
+
+    &--brand-hp {
+      background-position: -314px -169px;
+    }
+
+    &--brand-acer {
+      background-position: -586px -169px;
+    }
+
+    &--brand-sony {
+      background-position: -858px -169px;
+    }
+  }
+
+  &__button {
+    width: 40px;
+    height: 40px;
+    background: none;
+    border: none;
+    border-radius: 100%;
+    background: transparent url('../img/services/бренды.svg') no-repeat -216px -96px;
+    transform: translate(184px, -54px);
+    transition: all 0.2s ease-in-out;
+  }
+  &__button:hover {
+    opacity: 0.5;
+    cursor: pointer;
+  }
+
+  &__fade {
+    position: absolute;
+    transform: translate(1px, -97px);
+    right: 0;
+    z-index: 1;
+    width: 24px;
+    height: 81px;
+    background: linear-gradient(
+      270deg,
+      #f8f8f8 16.84%,
+      rgba(248, 248, 248, 0.0001) 100%
+    );
+  }
+
+  &__showmore {
+    &--hidden {
+      display: none;
+    }
+    &:hover {
+      cursor: pointer;
+    }
+  }
+  @media (min-width: $screen-md) {
+    &__wrapper {
+      flex-wrap: wrap;
+      margin-left: 0;
+      margin-bottom: 24px;
+    }
+
+    &__wrapper--open-margin-bottom {
+      margin-bottom: 30px;
+    }
+
+    &__wrapper--hidden {
+      height: 163px;
+      overflow: hidden;
+    }
+
+    &__slide {
+      width: 224px;
+      height: 72px;
+    }
+
+    &__button {
+      transform: translate(164px, -54px);
+    }
+
+    &__fade--hidden {
+      display: none;
+    }
+
+    &__showmore {
+      width: 156px;
+
+      &--hidden {
+        display: block;
+      }
+    }
+
+    &__showmore-text {
+      height: 24px;
+      font-family: TTLakes-Regular;
+      font-weight: 600;
+      font-size: 16px;
+      letter-spacing: -0.2px;
+      display: flex;
+      align-items: center;
+
+      &::before {
+        content: '';
+        background-image: url('../img/services/expand.svg');
+        height: 24px;
+        width: 24px;
+        margin-right: 9px;
+      }
+    }
+  }
+}
